@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/makananFragment">
+
+    <fragment
+        android:id="@+id/makananFragment"
+        android:name="com.example.latihan.ui.home.MakananFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_makanan" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/minumanFragment"
+        android:name="com.example.latihan.ui.minuman.MinumanFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_minuman" >
+        <action
+            android:id="@+id/action_minumanFragment_to_detailMinumanFragment"
+            app:destination="@id/detailMinumanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.latihan.ui.home.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="food"
+            app:argType="com.example.latihan.model.Food" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMinumanFragment"
+        android:name="com.example.latihan.ui.minuman.DetailMinumanFragment"
+        android:label="fragment_detail_minuman"
+        tools:layout="@layout/fragment_detail_minuman" />
+</navigation>
